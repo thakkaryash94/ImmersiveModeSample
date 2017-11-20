@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="example.yash.immersivemodesample">
+
+  <application android:icon="@drawable/ic_launcher"
+      android:label="@string/immersive_mode"
+      android:allowBackup="true">
+
+    <activity android:name=".ImmersiveActivity"
+        android:label="@string/immersive_mode"
+        android:configChanges="orientation|keyboardHidden|screenSize"
+        android:theme="@style/ImmersiveTheme">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+
+    <activity android:name=".ImmersiveStickyActivity"
+        android:taskAffinity=""
+        android:label="@string/immersive_sticky"
+        android:configChanges="orientation|keyboardHidden|screenSize"
+        android:theme="@style/ImmersiveStickyTheme">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+
+  </application>
+</manifest>
